@@ -5,7 +5,7 @@ frameworkPath: ../../Harmony3
 processor: ATSAMC21J18A
 projectName: samc21xpro-qt8
 settings:
-  PackageFilter: csp;dev_packs;harmony-services;quick_docs;touch
+  PackageFilter: csp;dev_packs;touch
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
