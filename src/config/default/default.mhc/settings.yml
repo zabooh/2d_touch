@@ -5,10 +5,10 @@ frameworkPath: ../../Harmony3
 processor: ATSAMC21J18A
 projectName: samc21xpro-qt8
 settings:
-  PackageFilter: csp;dev_packs;touch
+  PackageFilter: csp;dev_packs;harmony-services;quick_docs;touch
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
   CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
-  MERGE_STRATEGY: USER_ALL
+  MERGE_STRATEGY: OVERWRITE
   DFPPath: .\dev_packs\Microchip\SAMC21_DFP\3.8.119\samc21\atdf\ATSAMC21J18A.atdf
