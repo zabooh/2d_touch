@@ -64,7 +64,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
  * Range: 1 to 255.
  * Default value: 20.
  */
-#define DEF_TOUCH_MEASUREMENT_PERIOD_MS 5
+#define DEF_TOUCH_MEASUREMENT_PERIOD_MS 10
 
 /* Defines the Type of sensor
  * Default value: NODE_MUTUAL.
@@ -118,43 +118,43 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 
 #define NODE_0_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(24), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(24), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_1_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(21), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(21), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_2_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(22), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(22), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_3_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(31), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(31), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_4_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(30), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(30), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_5_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(29), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(29), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_6_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(28), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(28), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_7_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(25), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(25), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_8_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(15), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(15), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 #define NODE_9_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(14), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
+   X_NONE, Y(14), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                   \
 }
 
 /**********************************************************/

@@ -534,7 +534,7 @@ children:
       - type: Boolean
         attributes: {id: enabled}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
   - type: Integer
     attributes: {id: HORI_NUM_KEY}
     children:
@@ -555,7 +555,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: lib_qtouch, value: GCLK_ID_37_FREQ}
+        attributes: {id: lib_qtouch, value: 'GCLK_ID_37_FREQ:sync'}
   - type: KeyValueSet
     attributes: {id: SELFCAP-INPUT_0}
     children:
@@ -634,7 +634,7 @@ children:
       - type: Boolean
         attributes: {id: enabled}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
   - type: Menu
     attributes: {id: SURFACE_MENU}
     children:
@@ -940,15 +940,15 @@ children:
       - type: String
         attributes: {id: description}
         children:
-        - {type: Value}
+        - {type: Value, value: Open touch configurator and save project}
       - type: String
         attributes: {id: label}
         children:
-        - {type: Value}
+        - {type: Value, value: '!!!Warning PTC clock out of sync'}
       - type: Boolean
         attributes: {id: visible}
         children:
-        - {type: Value, value: 'false'}
+        - {type: Value, value: 'true'}
   - type: Integer
     attributes: {id: VERT_NUM_KEY}
     children:
@@ -965,24 +965,6 @@ children:
         attributes: {value: '0'}
 - type: Attachments
   children:
-  - type: DirectDependency
-    attributes: {id: Drivenshield_TC0}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: DirectDependency
-    attributes: {id: Drivenshield_TC1}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
   - type: DirectDependency
     attributes: {id: Drivenshield_TC4}
     children:
