@@ -64,7 +64,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
  * Range: 1 to 255.
  * Default value: 20.
  */
-#define DEF_TOUCH_MEASUREMENT_PERIOD_MS 10
+#define DEF_TOUCH_MEASUREMENT_PERIOD_MS 5
 
 /* Defines the Type of sensor
  * Default value: NODE_MUTUAL.
@@ -86,7 +86,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 /* Defines the interrupt priority for the PTC. Set low priority to PTC interrupt for applications having interrupt time
  * constraints.
  */
-#define DEF_PTC_INTERRUPT_PRIORITY 2
+#define DEF_PTC_INTERRUPT_PRIORITY 3
 
 /* Set default bootup acquisition frequency.
  * Range: FREQ_SEL_0 - FREQ_SEL_15 , FREQ_SEL_SPREAD
@@ -118,43 +118,43 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 
 #define NODE_0_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(24), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(24), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_1_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(21), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(21), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_2_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(22), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(22), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_3_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(31), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(31), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_4_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(30), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(30), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_5_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(29), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(29), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_6_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(28), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(28), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_7_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(25), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(25), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_8_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(15), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(15), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 #define NODE_9_PARAMS                                                                                               \
 {                                                                                                                  \
-   X_NONE, Y(14), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_4), FILTER_LEVEL_16                   \
+   X_NONE, Y(14), 4,PRSC_DIV_SEL_4, NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                   \
 }
 
 /**********************************************************/
@@ -247,7 +247,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
  * Range: RECAL_100/ RECAL_50 / RECAL_25 / RECAL_12_5 / RECAL_6_25 / MAX_RECAL
  * Default value: RECAL_100.
  */
-#define DEF_ANTI_TCH_RECAL_THRSHLD RECAL_100
+#define DEF_ANTI_TCH_RECAL_THRSHLD RECAL_50
 
 /* Rate at which sensor reference value is adjusted towards sensor signal value
  * when signal value is greater than reference.
@@ -337,7 +337,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
  * The minimum contact size measurement for persistent contact tracking.
  * Contact size is the sum of neighbouring keys' touch deltas forming the touch contact.
  */
-#define SURFACE_CS_MIN_CONTACT 60
+#define SURFACE_CS_MIN_CONTACT 30
 
 /**********************************************************/
 /***************** Gesture Parameters ****************/
@@ -461,6 +461,10 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 
 
 
+/**********************************************************/
+/***************** Enable/Disbale Driven shield ***********/
+/**********************************************************/
+#define DEF_ENABLE_DRIVEN_SHIELD 1u
 /**********************************************************/
 
 #define KRONOCOMM_UART 1u

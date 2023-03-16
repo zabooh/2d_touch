@@ -49,6 +49,10 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 #include "touch/touch.h"
 #include "touch/datastreamer/kronocommadaptor.h"
 #include "touch/datastreamer/kronocommuart_sam.h"
+#if (DEF_ENABLE_DRIVEN_SHIELD == 1u)
+#include "driven_shield.h"
+extern qtm_drivenshield_config_t qtm_drivenshield_config;
+#endif
 
 /*----------------------------------------------------------------------------
  *   prototypes
@@ -299,6 +303,9 @@ void touch_init(void)
 	/* Configure touch sensors with Application specific settings */
 	touch_sensors_config();
 
+#if (DEF_ENABLE_DRIVEN_SHIELD == 1u)
+	drivenshield_configure();
+#endif
 	
 
 }
@@ -512,5 +519,15 @@ Notes  : none
 void PTC_Handler(void)
 {
 	qtm_ptc_clear_interrupt();
+#if (DEF_ENABLE_DRIVEN_SHIELD == 1u)
+	if (qtm_drivenshield_config.flags & (1u << DRIVEN_SHIELD_DUMMY_ACQ)) {
+		/* Clear the flag */
+		qtm_drivenshield_config.flags &= (uint8_t) ~(1u << DRIVEN_SHIELD_DUMMY_ACQ);
+	} else {
+		drivenshield_stop();
 	qtm_samc21_ptc_handler_eoc();
+}
+#else
+	qtm_samc21_ptc_handler_eoc();
+#endif
 }

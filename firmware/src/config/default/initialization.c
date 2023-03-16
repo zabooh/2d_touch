@@ -138,9 +138,13 @@ void SYS_Initialize ( void* data )
 
     EVSYS_Initialize();
 
+    DMAC_Initialize();
+
     SERCOM4_USART_Initialize();
 
     RTC_Initialize();
+
+    TC4_CompareInitialize();
 
 
 

@@ -65,15 +65,6 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*** Macros for GPIO_PA19 pin ***/
-#define GPIO_PA19_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 19U))
-#define GPIO_PA19_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 19U))
-#define GPIO_PA19_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 19U))
-#define GPIO_PA19_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 19U))
-#define GPIO_PA19_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 19U))
-#define GPIO_PA19_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 19U)) & 0x01U)
-#define GPIO_PA19_PIN                  PORT_PIN_PA19
-
 // *****************************************************************************
 /* PORT Group
 

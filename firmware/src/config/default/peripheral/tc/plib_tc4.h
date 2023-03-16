@@ -1,18 +1,24 @@
 /*******************************************************************************
- System Interrupts File
+  Timer/Counter(TC4) PLIB
 
-  Company:
+  Company
     Microchip Technology Inc.
 
-  File Name:
-    interrupt.h
+  File Name
+    plib_tc4.h
 
-  Summary:
-    Interrupt vectors mapping
+  Summary
+    TC4 PLIB Header File.
 
-  Description:
-    This file contains declarations of device vectors used by Harmony 3
- *******************************************************************************/
+  Description
+    This file defines the interface to the TC peripheral library. This
+    library provides access to and control of the associated peripheral
+    instance.
+
+  Remarks:
+    None.
+
+*******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
@@ -36,35 +42,81 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
+*******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef INTERRUPTS_H
-#define INTERRUPTS_H
+#ifndef PLIB_TC4_H       // Guards against multiple inclusion
+#define PLIB_TC4_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include <stdint.h>
+/* This section lists the other files that are included in this file.
+*/
 
+#include "device.h"
+#include "plib_tc_common.h"
 
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Handler Routines
+// Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
+/* The following data type definitions are used by the functions in this
+    interface and should be considered part it.
+*/
 
-void Reset_Handler (void);
-void NonMaskableInt_Handler (void);
-void HardFault_Handler (void);
-void RTC_InterruptHandler (void);
-void DMAC_InterruptHandler (void);
-void SERCOM4_USART_InterruptHandler (void);
-void PTC_Handler (void);
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+// *****************************************************************************
+/* The following functions make up the methods (set of possible operations) of
+   this interface.
+*/
 
 
+void TC4_CompareInitialize( void );
 
-#endif // INTERRUPTS_H
+void TC4_CompareStart( void );
+
+void TC4_CompareStop( void );
+
+uint32_t TC4_CompareFrequencyGet( void );
+
+
+uint8_t TC4_Compare8bitPeriodGet( void );
+
+uint8_t TC4_Compare8bitCounterGet( void );
+
+void TC4_Compare8bitCounterSet( uint8_t count );
+
+bool TC4_Compare8bitMatch0Set( uint8_t compareValue );
+
+bool TC4_Compare8bitMatch1Set( uint8_t compareValue );
+
+
+TC_COMPARE_STATUS TC4_CompareStatusGet( void );
+
+void TC4_CompareCommandSet(TC_COMMAND command);
+
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+
+#endif
+// DOM-IGNORE-END
+
+#endif /* PLIB_TC4_H */

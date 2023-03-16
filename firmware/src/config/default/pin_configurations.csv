@@ -30,7 +30,7 @@
 35,PA16,,Available,,,,,,NORMAL
 36,PA17,,PTC_X5/Y21,Analog,High Impedance,n/a,,,NORMAL
 37,PA18,,PTC_X6/Y22,Analog,High Impedance,n/a,,,NORMAL
-38,PA19,GPIO_PA19,GPIO,Digital,Out,High,,,NORMAL
+38,PA19,,Available,,,,,,NORMAL
 39,PB16,,Available,,,,,,NORMAL
 40,PB17,,Available,,,,,,NORMAL
 41,PA20,,PTC_X8/Y24,Analog,High Impedance,n/a,,,NORMAL
