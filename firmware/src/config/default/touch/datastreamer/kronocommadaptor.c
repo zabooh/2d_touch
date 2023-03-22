@@ -51,6 +51,7 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 #include "touch/datastreamer/KronoCommuart_sam.h"
 
 #endif
+extern qtm_gestures_2d_data_t m_gesture;
 
 static uint8_t                   writeback_req = 0u;
 extern qtm_acquisition_control_t qtlib_acq_set1;
@@ -220,7 +221,10 @@ void Krono_UpdateBuffer(void)
 #if (KRONO_GESTURE_ENABLE == 1u)
 	if (qtm_gestures_2d_data.gestures_status) {
 		touchRam[0] |= TOUCHSTATE_GES;
-		SetIRQPin();
+		SetIRQPin(); 
+        m_gesture.gestures_info = qtm_gestures_2d_data.gestures_info;
+        m_gesture.gestures_status = qtm_gestures_2d_data.gestures_status;
+        m_gesture.gestures_which_gesture = qtm_gestures_2d_data.gestures_which_gesture;
 	}
 #endif
 	if (qtm_surface_cs_data1.qt_surface_cs2t_status & TOUCH_ACTIVE) {

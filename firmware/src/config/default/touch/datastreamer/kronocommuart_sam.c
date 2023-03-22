@@ -44,6 +44,13 @@ SUBSTITUTE  GOODS,  TECHNOLOGY,  SERVICES,  OR  ANY  CLAIMS  BY  THIRD   PARTIES
 
 #if KRONOCOMM_UART == 1u
 
+char m_buffer[100];
+uint32_t m_ix=0;
+uint32_t m_len=0;
+int32_t peng=0;
+
+qtm_gestures_2d_data_t m_gesture;
+
 extern struct io_descriptor *uart_io_ptr;
 
 volatile uint8_t write_buffer[UART_TX_BUF_LEN];
@@ -120,8 +127,8 @@ void uart_send_data(void)
 	if (uart_tx_in_progress == 0) {
 		uart_tx_in_progress = 1;
 
-		write_buf_read_ptr = 0;
-        SERCOM4_USART_Write(&uart_runtime_data[write_buf_read_ptr++], 1);
+        m_ix = 0;
+        SERCOM4_USART_Write(&m_buffer[m_ix++], 1);
 	}
 }
 
@@ -221,9 +228,12 @@ void uart_send_header(uint8_t len, uint8_t id, uint8_t address)
 void uart_process(void)
 {
 	uint8_t l_trans_id = 0, l_addr = 0, l_len = 0;
-    
-
-	if (uart_new_data_available == 1) {
+   
+    if (m_gesture.gestures_status == 1) {
+        m_gesture.gestures_status = 0;
+        sprintf(m_buffer,"Gesture: %02x %02x\n\r",m_gesture.gestures_info,m_gesture.gestures_which_gesture);
+        m_len = strlen(m_buffer);        
+                    
 		uart_new_data_available = 0;
 		uart_send_data();
 	}
@@ -304,9 +314,9 @@ void krono_tx_complete_callback(uintptr_t usart_ptr)
 		uart_tx_in_progress = 0;
 	} else {
 
-		if (write_buf_read_ptr < (UART_GES_LEN + UART_SIG_LEN + UART_DELTA_LEN + UART_FIXED * 3)) {
-			SERCOM4_USART_Write(&uart_runtime_data[write_buf_read_ptr], 1);
-			write_buf_read_ptr++;
+        if (m_ix < m_len) {
+            SERCOM4_USART_Write(&m_buffer[m_ix], 1);
+			m_ix++;
 		} else {
 			uart_tx_in_progress = 0;
 		}
