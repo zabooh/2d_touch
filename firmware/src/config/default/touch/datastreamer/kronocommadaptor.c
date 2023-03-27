@@ -221,7 +221,7 @@ void Krono_UpdateBuffer(void)
 #if (KRONO_GESTURE_ENABLE == 1u)
 	if (qtm_gestures_2d_data.gestures_status) {
 		touchRam[0] |= TOUCHSTATE_GES;
-		SetIRQPin(); 
+		SetIRQPin();
         m_gesture.gestures_info = qtm_gestures_2d_data.gestures_info;
         m_gesture.gestures_status = qtm_gestures_2d_data.gestures_status;
         m_gesture.gestures_which_gesture = qtm_gestures_2d_data.gestures_which_gesture;

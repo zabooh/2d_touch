@@ -6,20 +6,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: E45D1648EFC10229D7BE94DB19221FF7
-- generatedChecksum: C094B74214BD56DC4BA0B5D4B30A0DBF
+- generatedChecksum: 78BF0846A578617DE5EAED88B7C7A49A
   logicalPath: config/default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C094B74214BD56DC4BA0B5D4B30A0DBF
-- generatedChecksum: 69253383C8B2782D814D420A86C56018
+  userChecksum: 78BF0846A578617DE5EAED88B7C7A49A
+- generatedChecksum: 7643F7BAA1E595B4D25A558BDDE8CFF6
   logicalPath: config/default
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 69253383C8B2782D814D420A86C56018
+  userChecksum: 7643F7BAA1E595B4D25A558BDDE8CFF6
 - generatedChecksum: 7E2F31097BCF68893981693106AC1A35
   logicalPath: config/default/touch/datastreamer
   name: kronocommadaptor.c
@@ -27,13 +27,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7E2F31097BCF68893981693106AC1A35
-- generatedChecksum: 04A8DC125F4A78AE8773F896D39A31FF
+- generatedChecksum: 938ED6C4637676DD1251E767BA9C6D24
   logicalPath: config/default/touch/datastreamer
   name: kronocommuart_sam.c
   physicalPath: touch/datastreamer
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 04A8DC125F4A78AE8773F896D39A31FF
+  userChecksum: 938ED6C4637676DD1251E767BA9C6D24
 - generatedChecksum: 2CDCA8CDF135BDEB85FDFC0A2A991C0B
   logicalPath: config/default
   name: libc_syscalls.c
@@ -41,20 +41,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2CDCA8CDF135BDEB85FDFC0A2A991C0B
-- generatedChecksum: null
-  logicalPath: ''
-  name: main.c
-  physicalPath: ../..
-  security: NON_SECURE
-  type: SOURCE
-  userChecksum: null
-- generatedChecksum: D3F5CC4A83FEBFBF16AE9C3D5B6013C5
+- generatedChecksum: 2E4E37FF345B7AC9C942245C34A91D4B
   logicalPath: config/default/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D3F5CC4A83FEBFBF16AE9C3D5B6013C5
+  userChecksum: 2E4E37FF345B7AC9C942245C34A91D4B
 - generatedChecksum: 239BA75AFC5F4B30FDFA353F9859B797
   logicalPath: config/default/peripheral/evsys
   name: plib_evsys.c
@@ -62,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 239BA75AFC5F4B30FDFA353F9859B797
-- generatedChecksum: F8C8FA7BCEB444A853FF4283409C7C0E
+- generatedChecksum: 5EBA8DB0FF06B5880DE003D0D2FF2E4E
   logicalPath: config/default/peripheral/nvic
   name: plib_nvic.c
   physicalPath: peripheral/nvic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F8C8FA7BCEB444A853FF4283409C7C0E
+  userChecksum: 5EBA8DB0FF06B5880DE003D0D2FF2E4E
 - generatedChecksum: D4D6E4E50E443F793BFED0A79B849B6A
   logicalPath: config/default/peripheral/nvmctrl
   name: plib_nvmctrl.c
@@ -90,13 +83,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 06D8DE21759902BF7C8BAB32BD8D956E
-- generatedChecksum: 295E98883F689D2705B785754E9DB2AE
+- generatedChecksum: 226C6072D8C72D628E9C6BFD1FCDF5B6
   logicalPath: config/default/peripheral/sercom/usart
-  name: plib_sercom4_usart.c
+  name: plib_sercom3_usart.c
   physicalPath: peripheral/sercom/usart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 295E98883F689D2705B785754E9DB2AE
+  userChecksum: 226C6072D8C72D628E9C6BFD1FCDF5B6
 - generatedChecksum: 64C7B09EBF0E16AC27EFD31B52FDDDF8
   logicalPath: config/default
   name: startup_xc32.c
@@ -272,13 +265,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 961EBA81B5199F24F730AF5EA5785287
-- generatedChecksum: C94A27D475383968D144B670D86DAF6E
+- generatedChecksum: 85B1C9DD5D8D4F37E702A388970B1D13
   logicalPath: config/default
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: C94A27D475383968D144B670D86DAF6E
+  userChecksum: 85B1C9DD5D8D4F37E702A388970B1D13
 - generatedChecksum: 6CF17CD3E923B919E310979485EA4B8B
   logicalPath: config/default
   name: device.h
@@ -426,13 +419,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 45B251D7FA7944D72E439447A6317B6A
-- generatedChecksum: 67BD7079261AF21B98053B2B3542E995
+- generatedChecksum: 40DAC35C4C25A23D051521A7263DE4A7
   logicalPath: config/default
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 67BD7079261AF21B98053B2B3542E995
+  userChecksum: 40DAC35C4C25A23D051521A7263DE4A7
 - generatedChecksum: F6007192690F10182A6077C5D8211392
   logicalPath: config/default/touch/datastreamer
   name: kronocommadaptor.h
@@ -580,13 +573,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 16D039EA7EE23884CE62767ABD77B59C
-- generatedChecksum: 0550FB5CCFD4F5763D061C46CDB3786D
+- generatedChecksum: 63EC1A2944113596AD25C583BFF94013
   logicalPath: config/default/peripheral/sercom/usart
-  name: plib_sercom4_usart.h
+  name: plib_sercom3_usart.h
   physicalPath: peripheral/sercom/usart
   security: NON_SECURE
   type: HEADER
-  userChecksum: 0550FB5CCFD4F5763D061C46CDB3786D
+  userChecksum: 63EC1A2944113596AD25C583BFF94013
 - generatedChecksum: 89D68FCEF2422C9008AB71DE144653CB
   logicalPath: config/default/peripheral/sercom/usart
   name: plib_sercom_usart_common.h
@@ -874,13 +867,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 5A6CE947CB477E5554790DE371B7FBAB
-- generatedChecksum: 03D1438F29E67E3338E2394C01B9A863
+- generatedChecksum: E75E21A25C9931371D3B80A5CB79B5E5
   logicalPath: config/default/touch
   name: touch.h
   physicalPath: touch
   security: NON_SECURE
   type: HEADER
-  userChecksum: 03D1438F29E67E3338E2394C01B9A863
+  userChecksum: E75E21A25C9931371D3B80A5CB79B5E5
 - generatedChecksum: 633B4896B8A6B2EF18D8687B23980E79
   logicalPath: config/default/touch
   name: touch_api_ptc.h

@@ -198,7 +198,7 @@
             </logicalFolder>
             <logicalFolder name="f6" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom4_usart.c</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom3_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>

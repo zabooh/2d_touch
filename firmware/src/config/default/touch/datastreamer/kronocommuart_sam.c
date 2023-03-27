@@ -117,7 +117,7 @@ uint8_t uart_get_char(void)
 void uart_send_data_wait(uint8_t data)
 {
 	uart_tx_in_progress = 1;
-    SERCOM4_USART_Write(&data, 1);
+    SERCOM3_USART_Write(&data, 1);
 	while (uart_tx_in_progress == 1)
 		;
 }
@@ -128,7 +128,7 @@ void uart_send_data(void)
 		uart_tx_in_progress = 1;
 
         m_ix = 0;
-        SERCOM4_USART_Write(&m_buffer[m_ix++], 1);
+        SERCOM3_USART_Write(&m_buffer[m_ix++], 1);
 	}
 }
 
@@ -160,10 +160,10 @@ void uart_init_debug_data(void)
 	uart_runtime_data[UART_DELTA_POS + 5] = UART_DELTA_ADDR;
 	uart_runtime_data[UART_DELTA_END]     = UART_FOOTER;
 
-    SERCOM4_USART_WriteCallbackRegister(krono_tx_complete_callback, usart_ptr);
-    SERCOM4_USART_ReadCallbackRegister(krono_rx_complete_callback, usart_ptr);
+    SERCOM3_USART_WriteCallbackRegister(krono_tx_complete_callback, usart_ptr);
+    SERCOM3_USART_ReadCallbackRegister(krono_rx_complete_callback, usart_ptr);
 
-    SERCOM4_USART_Read(&read_buffer[read_buf_write_ptr], 1);
+    SERCOM3_USART_Read(&read_buffer[read_buf_write_ptr], 1);
 
 }
 
@@ -315,7 +315,7 @@ void krono_tx_complete_callback(uintptr_t usart_ptr)
 	} else {
 
         if (m_ix < m_len) {
-            SERCOM4_USART_Write(&m_buffer[m_ix], 1);
+            SERCOM3_USART_Write(&m_buffer[m_ix], 1);
 			m_ix++;
 		} else {
 			uart_tx_in_progress = 0;
@@ -330,7 +330,7 @@ void krono_rx_complete_callback(uintptr_t usart_ptr)
         read_buf_write_ptr = 0;
     }
 
-    SERCOM4_USART_Read(&read_buffer[read_buf_write_ptr], 1);
+    SERCOM3_USART_Read(&read_buffer[read_buf_write_ptr], 1);
 }
 
 #endif

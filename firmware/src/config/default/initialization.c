@@ -134,11 +134,11 @@ void SYS_Initialize ( void* data )
 
 
 
+    SERCOM3_USART_Initialize();
+
     NVMCTRL_Initialize( );
 
     EVSYS_Initialize();
-
-    SERCOM4_USART_Initialize();
 
     RTC_Initialize();
 
